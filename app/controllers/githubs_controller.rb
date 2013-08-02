@@ -6,7 +6,7 @@ class GithubController < ApplicationController
 
   def authorize
     github  = Github.new client_id: ENV['GITHUB_CLIENT_ID'], client_secret: ENV['GITHUB_SECRET']
-    address = github.authorize_url redirect_uri: 'http://...', scope: 'repo'
+    address = github.authorize_url redirect_uri: 'http://', scope: 'repo'
     redirect_to address
   end
 
