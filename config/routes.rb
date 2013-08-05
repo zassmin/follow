@@ -1,3 +1,3 @@
 Follow::Application.routes.draw do
-  match '/auth', to 'githubs#authorize'
+  match '/auth', to: 'github#authorize'
 end
